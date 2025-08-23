@@ -1,0 +1,12 @@
+Manipulate our DOM using Javascript and it is done using React.
+add or removing something from dom is the costlier thing.
+
+react element contain 3 things, one is tag name, object for attribute and what we are
+going to put inside that tag.
+
+
+react element is an object , if you console it , you will able to see
+whole object .
+
+
+ReactElement(object) => HTML(Browser understand).
