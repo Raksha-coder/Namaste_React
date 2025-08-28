@@ -1,0 +1,127 @@
+How to ready your code to push on production that is lecture 2 is about.
+
+before pushing code to production
+you have to do lot of things 
+like minifying your code,
+bundling your code ,
+Image optimization,
+chuncking
+
+
+😛About NPM ?
+
+1.npm does not have a full form 
+2.npm manages packages but it does not stand for node package manager .
+3.npm is a standard repository for all the packages.It is a biggest package manager.
+4.any package we want to include in our project , we can use npm . 
+5.All the packages are hosted over npm repository.
+6.all the libraries, all the utilities that we want to use , comes in npm .
+
+
+let's add npm in our project .
+npm init
+name your package name 
+put some description.
+for test command just add jest for now 
+it will show the git repository location.
+in keyword add anything as you want . like react , js etc.
+add author name 
+for license , just enter , go with ISC(default).
+
+by doing this steps , you will get the 😎Package.json file.
+this whole step created a json file ...
+
+
+😛package.json
+1. package.json is the configuration for npm .
+2. package and dependencies are one and the same thing .
+3. our project is dependent on all of packages.
+4. npm take care of versions of all the packages .
+
+
+😛the most important package in our project is a Bundler.
+what is Bundler ?
+when we have html, css and js , 
+our whole code needs to be bundle together,
+minified together, cached, compressed, cleaned 
+before it get sent to production.
+
+
+😛Bundler 
+webpack, parcel, vite all are bundlers.
+Bundlers are tools that take your application’s source code (JavaScript, TypeScript, CSS, images, etc.) and bundle them into optimized files that browsers can understand and load efficiently.(production ready)
+
+👉 Think of a bundler like a kitchen chef:
+
+You give them raw ingredients (your source code, dependencies, styles, images).
+The chef prepares a dish (a single optimized file or set of files).
+The customer (browser) only needs that prepared dish to enjoy the meal — not the raw ingredients separately.
+
+👉 Why do we use Bundlers?
+
+1.Combine multiple files into fewer files
+Browsers used to make a new request for every JS file. Bundling reduces HTTP requests by combining them.
+Example: Instead of loading 100 JS files, it loads 1–2 bundles.
+
+2.Transpiling / Compatibility
+Write code in modern JS/TS/React/Vue, but not all browsers support it.
+Bundlers work with Babel or SWC to convert it into browser-compatible code.
+
+3.Minification / Optimization
+Removes spaces, comments, unused code (tree-shaking).
+Makes final files smaller and faster to load.
+
+4.Asset Handling
+Can also bundle CSS, images, fonts, etc., into the output.
+Example: Importing CSS directly inside JS (import './style.css').
+
+5.Hot Reloading / Dev Server
+Bundlers like Vite, Webpack Dev Server, Parcel spin up a local server.
+Instantly reflect changes in the browser without manual reload.
+
+
+😛devdependencies vs dependencies 
+
+devDependencies is required when we develop our app. 
+and normal dependencies are used in production.
+
+we install parcel as a dev dependencies because the minification of code,
+transpilation of code is done on development environment only, production pe 
+iski zarurat nahi padti h .
+
+😛caret(^) and tild(~) sign in package versions?
+when we use ^ (caret) , and if in future parcel version get upgrade from 
+2.8.3 to 2.8.4 then caret will automatically upgrade my parcel package to 
+2.8.4. 
+
+we use caret for minor version upgrade.
+
+when we use tilde(~) , when we want to upgrade the pacel package to it's major version.
+
+😛what is package-lock.json
+It keeps the track of exact version of packages(dependencies), that is being installed.
+It lock the version of packages and keeps the record of it.
+
+It is working on my local but it's not working on my production.
+so to avoid it , package-lock.json keep the integrity means hash of all the version 
+and check whatever we have in local are those are same on production.
+
+😛Node_Modules ?
+it contain all the code that we fetch from npm when installing any package and keep it in our project which i have just created.
+each package or dependencies have there own code and there own dependencies(transitive dependency)package.json.
+
+node module is kind of database , where all are packages exist.
+
+
+😛transitive dependencies
+parcel as an object have it's own dependencies and those dependencies would have their 
+own dependencies , it is called as transitive dependencies.
+
+
+😛gitignore file
+if i do not want to push node modules to my github or production(include production env also), then i will use gitignore.
+😛gitignore tells Git which files/folders not to track or push.
+
+
+
+
