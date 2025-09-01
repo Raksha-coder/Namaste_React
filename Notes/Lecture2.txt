@@ -110,7 +110,7 @@ and check whatever we have in local are those are same on production.
 it contain all the code that we fetch from npm when installing any package and keep it in our project which i have just created.
 each package or dependencies have there own code and there own dependencies(transitive dependency)package.json.
 
-node module is kind of database , where all are packages exist.
+node module is kind of database , where all packages exist.
 
 
 😛transitive dependencies
@@ -120,7 +120,43 @@ own dependencies , it is called as transitive dependencies.
 
 😛gitignore file
 if i do not want to push node modules to my github or production(include production env also), then i will use gitignore.
-😛gitignore tells Git which files/folders not to track or push.
+gitignore tells Git which files/folders not to track or push.
+
+Note : It is important to push package.json and package-lock.json into github.
+package-lock.json take care of that whatever dependency we have in local 
+should be same on production.
+
+Note : If i have package and package-lock.json then i can regenerate Node_Modules folder 
+by using npm install.
+
+whatever you can regenerate do not put it into .gitignore
+
+
+
+😛Now we are building our application using parcel
+npx parcel index.html(source file of our application)
+our app will start running on localhost .
+npx means executing a package.
+
+By executing this => parcel goes to index.html and build our application
+and our application starts running on localhost.
+
+
+😛Note : CDN links are not preferred way to bring react and
+react-dom into our project , becuase it is an expensive process
+because we are making an another network call instead we can install it 
+and have react in our node_module , so it would be easy to use react.
+If in future if the cdn link got change, then we have to update them .
+
+
+😛Install react and react-dom
+npm i react
+npm i react-dom
+now we no longer need the cdn links
+
+
+😛parcel automatically update the content on UI 
+whenever we change anything on our code.
 
 
 

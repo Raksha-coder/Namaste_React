@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 
 // this is very confusing structure that's why we use JSX
 const div = React.createElement(
@@ -8,12 +11,6 @@ const div = React.createElement(
     {id:"child"},
     [React.createElement('h1',{},"Hi There"),React.createElement('h1',{},"Hi There")]
   ));
-
-
-
-
-
-
 
 const heading = React.createElement(
   "h1", {id:"heading"}, "Hello world from react"
