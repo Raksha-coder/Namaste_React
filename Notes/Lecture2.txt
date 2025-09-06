@@ -158,6 +158,45 @@ now we no longer need the cdn links
 😛parcel automatically update the content on UI 
 whenever we change anything on our code.
 
+- Dev build
+- Local Server
+- HMR = hot module replacement 
+- File watching algorithm - written in c++
+- Parcel Caching - Faster Builds
+- Image Optimization (most expensive thing in our app is to load image in our webpage)
+- Parcel does Minification of our file (production ready).
+- Bundling 
+- compressing
+- Consistent Hashing
+- code splitting (lazy loading)
+- Differential Bundling (make our app available for older browser also) - support older browsers 
+- Diagnostic
+- Error Handling 
+- Host app on HTTPS 
+- Tree shaking - remove unused code 
+- Different dev and production bundles
+(npx parcel build index.html)
+
+
+😛Note : 
+1. whenever we run npx parcel index.html 
+all the bundles get created under dist folder .
+and when we rebuild, parcel use dist and .parcel-cache 
+folders .(Hot module replacement).
+
+2. I can regenerate dist folder by npx parcel build index.html 
+so that's why I am putting it into gitignore.
+
+😛Make our app compatible with older versions 
+- We will use browserList
+- you have to mention on which browser and there versions you wanna support
+your application.
+- on your package.json you configure browserLists.
+
+
+
+
+
 
 
 
