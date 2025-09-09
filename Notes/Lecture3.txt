@@ -1,0 +1,45 @@
+😋instead of trying npx parcel index.html
+we will create a npm script in package.json(short way for all the commands)
+
+create a script to starting our project in dev mode.
+=> npm run kroStart or npm kroStart (run is optional)
+=> npm run build (must add run)
+
+
+
+😋JSX - JSX is Html like syntax (not exact HTML).
+1.Facebook developer create JSX to make the react element syntax simpler .
+2.we can write react without JSX using React.createElement
+3.JSX and react are different
+4.JSX is where we merge HTML and Javascript Together rather than creating separate files for both.
+5.JSX is not a pure javascript.
+6.Browser does not know JSX, so it is get converted to React first using parcel so that browser will understand this.
+
+Note : React Element and JSX are one and the same thing.
+
+😋JSX(transpiled before it reaches the JS Engine) - PARCEL
+1.Using Babel parcel transpile JSX code into REACT.
+2.Babel is a normal js package.
+3.Babel is not created by Facebook.
+
+JSX => React Element(transpile using Babel) => object => HtmlElement.
+
+😋Difference between normal html,js and JSX
+1.in JSX we use className an in html we use className
+2.we use camelCase in JSX for attribute and in html we use all small case .
+Example : tabIndex=""  and tabindex=""
+
+
+
+😋How we write JSX in multi-line so that babel will 
+understand from where JSX started and ended.we use paranthesis ()
+
+const heading = (
+  <h1 className="head">
+    This is JSX heading
+  </h1>
+);
+
+
+
+
